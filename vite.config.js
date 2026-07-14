@@ -25,7 +25,7 @@ function generateStoryApi(env) {
         try {
           const { prompt } = JSON.parse(body)
           const result = await ai.models.generateContent({
-            model: 'gemini-flash-latest',
+            model: 'gemini-flash-lite-latest',
             contents: prompt,
           })
           res.end(JSON.stringify({ story: result.text }))

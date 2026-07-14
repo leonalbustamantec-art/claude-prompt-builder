@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   try {
     const { prompt } = req.body
     const result = await ai.models.generateContent({
-      model: 'gemini-flash-latest',
+      model: 'gemini-flash-lite-latest',
       contents: prompt,
     })
     res.status(200).json({ story: result.text })

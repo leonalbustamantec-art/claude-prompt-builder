@@ -1,0 +1,101 @@
+.comparison-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.1);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: comparison-card-in 0.2s ease;
+}
+
+.comparison-card__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f1f6;
+}
+
+.comparison-card__section--after {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.comparison-card__label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6b7280;
+}
+
+.comparison-card__label--changed {
+  color: #ffffff;
+  background: var(--block-color);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: none;
+  letter-spacing: normal;
+  width: fit-content;
+}
+
+.comparison-card__label--personaje {
+  --block-color: #7c5cfc;
+}
+
+.comparison-card__label--accion {
+  --block-color: #ff8a3d;
+}
+
+.comparison-card__label--lugar {
+  --block-color: #2fbf9b;
+}
+
+.comparison-card__label--estilo {
+  --block-color: #f4c542;
+}
+
+.comparison-card__explanation {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937;
+}
+
+.comparison-card__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.comparison-card__actions button {
+  border: none;
+  background: #f7f8fc;
+  color: #1f2937;
+  font-weight: 700;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.comparison-card__actions button:hover {
+  transform: scale(1.03);
+}
+
+@keyframes comparison-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

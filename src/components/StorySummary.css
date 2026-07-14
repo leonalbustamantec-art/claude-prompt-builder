@@ -1,0 +1,82 @@
+.story-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.story-summary__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.story-summary__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.story-summary__piece {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.story-summary__connector {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.story-summary__connector--suffix {
+  margin-left: -0.35rem;
+}
+
+.story-summary__chip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  box-shadow: 0 2px 8px rgba(31, 41, 55, 0.08);
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.story-summary__chip--personaje {
+  --block-color: #7c5cfc;
+}
+
+.story-summary__chip--accion {
+  --block-color: #ff8a3d;
+}
+
+.story-summary__chip--lugar {
+  --block-color: #2fbf9b;
+}
+
+.story-summary__chip--estilo {
+  --block-color: #f4c542;
+}
+
+.story-summary__chip--highlighted {
+  border-color: var(--block-color);
+  transform: scale(1.05);
+}
+
+.story-summary__emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.story-summary__text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}

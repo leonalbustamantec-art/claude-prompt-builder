@@ -1,0 +1,93 @@
+.block {
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.1);
+  background: #ffffff;
+  padding: 1.25rem 1rem;
+  border-top: 6px solid var(--block-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.block--personaje {
+  --block-color: #7c5cfc;
+}
+
+.block--accion {
+  --block-color: #ff8a3d;
+}
+
+.block--lugar {
+  --block-color: #2fbf9b;
+}
+
+.block--estilo {
+  --block-color: #f4c542;
+}
+
+.block__label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--block-color);
+}
+
+.block__body {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.block__arrow {
+  border: none;
+  background: #f7f8fc;
+  color: #1f2937;
+  font-size: 1.1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.block__arrow:hover {
+  background: var(--block-color);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.block__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 7.5rem;
+  animation: block-pop 0.18s ease;
+}
+
+.block__emoji {
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.block__text {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937;
+}
+
+@keyframes block-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

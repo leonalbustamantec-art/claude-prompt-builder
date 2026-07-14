@@ -1,0 +1,31 @@
+.highlighted-story {
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.highlighted-story__mark {
+  border-radius: 6px;
+  padding: 0.05em 0.3em;
+  font-weight: 700;
+}
+
+.highlighted-story__mark--personaje {
+  background: rgba(124, 92, 252, 0.18);
+  color: #5c3fd6;
+}
+
+.highlighted-story__mark--accion {
+  background: rgba(255, 138, 61, 0.18);
+  color: #c9601a;
+}
+
+.highlighted-story__mark--lugar {
+  background: rgba(47, 191, 155, 0.18);
+  color: #1f8d70;
+}
+
+.highlighted-story__mark--estilo {
+  background: rgba(244, 197, 66, 0.25);
+  color: #8a6d00;
+}

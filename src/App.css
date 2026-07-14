@@ -1,0 +1,184 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.app__title {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+.app__layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.app__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.app__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.app__preview {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.08);
+  width: 100%;
+}
+
+.app__generate {
+  border: none;
+  background: #7c5cfc;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.9rem 2.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(124, 92, 252, 0.35);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.app__generate:hover:not(:disabled) {
+  transform: scale(1.03);
+}
+
+.app__generate:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.app__waiting {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.app__error {
+  text-align: center;
+  color: #d64545;
+  font-weight: 600;
+}
+
+.app__result {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.1);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  animation: result-in 0.2s ease;
+}
+
+.app__story {
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.app__result-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.app__result-actions button {
+  border: none;
+  background: #f7f8fc;
+  color: #1f2937;
+  font-weight: 700;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.app__result-actions button:hover {
+  transform: scale(1.03);
+}
+
+.app__experiment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.1);
+  padding: 1.75rem;
+}
+
+.app__surprise {
+  border: none;
+  background: #f7f8fc;
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.7rem 1.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.app__surprise:hover:not(:disabled) {
+  transform: scale(1.03);
+}
+
+.app__surprise:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+@keyframes result-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .app__title {
+    font-size: 2.5rem;
+  }
+
+  .app__layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .app__blocks {
+    flex: 0 0 240px;
+  }
+
+  .app__panel {
+    flex: 1;
+  }
+}
